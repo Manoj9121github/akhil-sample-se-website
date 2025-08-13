@@ -1,9 +1,10 @@
 "use client";
 
 import React from "react";
-import { Card, CardContent,  } from "./ui/card";
+import { Card, CardContent } from "./ui/card";
 import { Badge, Star } from "lucide-react";
 import { BRAND } from "@/data/brand";
+import Image from "next/image";
 
 const HERO_IMAGES = [
   "https://images.unsplash.com/photo-1516383607781-913a19294fd1?q=80&w=1600&auto=format&fit=crop",
@@ -26,24 +27,31 @@ const About = () => {
           </p>
           <ul className="space-y-2 text-gray-700">
             <li className="flex gap-2">
-              <Star className="w-5 h-5 mt-0.5" /> Premium HDPE & Silpaulin ranges
+              <Star className="w-5 h-5 mt-0.5" /> Premium HDPE & Silpaulin
+              ranges
             </li>
             <li className="flex gap-2">
-              <Star className="w-5 h-5 mt-0.5" /> Bulk availability & quick dispatch
+              <Star className="w-5 h-5 mt-0.5" /> Bulk availability & quick
+              dispatch
             </li>
             <li className="flex gap-2">
-              <Star className="w-5 h-5 mt-0.5" /> Professional guidance on GSM & application
+              <Star className="w-5 h-5 mt-0.5" /> Professional guidance on GSM &
+              application
             </li>
           </ul>
         </div>
 
         <div className="grid grid-cols-2 gap-4">
-          <img
+          <Image
+          width={700}
+          height={400}
             className="rounded-2xl object-cover h-48 w-full"
             src={HERO_IMAGES[1]}
             alt="Warehouse"
           />
-          <img
+          <Image
+          width={700}
+          height={300}
             className="rounded-2xl object-cover h-48 w-full"
             src={HERO_IMAGES[2]}
             alt="Materials"

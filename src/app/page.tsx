@@ -7,7 +7,7 @@ import About from "../components/About";
 import Contact from "../components/Contact";
 import Enquiry from "../components/Enquiry";
 import Footer from "../components/Footer";
-import { BRAND } from "../data/brand";
+
 
 export default function HomePage() {
   return (
@@ -18,7 +18,7 @@ export default function HomePage() {
       <About />
       <Contact />
       <Enquiry />
-      <Footer brand={BRAND} />
+      
     </>
   );
 }
