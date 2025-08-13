@@ -1,7 +1,5 @@
-"use client"
+"use client";
 
-
-import React from "react";
 import Navbar from "../components/Navbar";
 import Hero from "../components/Hero";
 import Products from "../components/Products";
@@ -12,7 +10,7 @@ import Footer from "../components/Footer";
 import FloatingWhatsApp from "../components/FloatingWhatsApp";
 import { BRAND } from "../data/brand";
 
-export default function App() {
+export default function HomePage() {
   const whatsappLink = (text: string) =>
     `https://wa.me/${BRAND.phoneDigits}?text=${encodeURIComponent(text)}`;
 
@@ -20,7 +18,6 @@ export default function App() {
     <div className="min-h-screen w-full bg-gray-50 text-gray-900">
       <Navbar whatsappLink={whatsappLink} />
       <Hero whatsappLink={whatsappLink} />
-      
       <Products whatsappLink={whatsappLink} />
       <About />
       <Contact whatsappLink={whatsappLink} />
