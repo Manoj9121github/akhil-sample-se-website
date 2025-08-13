@@ -1,6 +1,8 @@
 import React from 'react'
 import { Card, CardContent } from './ui/card'
+
 import { Badge, Star } from 'lucide-react'
+
 import { BRAND } from '@/data/brand'
 
 const About = () => {
