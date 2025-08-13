@@ -1,24 +1,14 @@
-import React from "react"
-import Image from "next/image"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { Button } from "@/components/ui/button"
+// ProductCard.tsx
+import React from "react";
+import Image from "next/image";
+import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
+import { Badge } from "./ui/badge";
 
-export interface Product {
-  id: string
-  cat: string
-  title: string
-  gsm: string | number
-  color: string
-  img: string
-  bullets: string[]
-}
-
-export default function ProductCard({ product }: { product: Product }) {
+export default function ProductCard({ product }) {
   return (
     <Card className="overflow-hidden shadow-md rounded-2xl">
       <CardHeader className="p-0">
-        <Image 
+        <Image
           src={product.img}
           alt={product.title}
           width={500}
@@ -37,10 +27,8 @@ export default function ProductCard({ product }: { product: Product }) {
             <li key={i}>{b}</li>
           ))}
         </ul>
-        <Button variant="outline" className="mt-4 w-full">
-          View Details
-        </Button>
+        <button className="mt-4 w-full border rounded-md py-2">View Details</button>
       </CardContent>
     </Card>
-  )
+  );
 }

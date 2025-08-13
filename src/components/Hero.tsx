@@ -1,17 +1,19 @@
-import React from "react"
-import Image from "next/image"
+"use client";
+
+import React from "react";
+import Image from "next/image";
 
 const HERO_IMAGES = [
-  "https://images.unsplash.com/photo-1516383607781-913a19294fd1?q=80&w=1600&auto=format&fit=crop", // warehouse
-  "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop", // factory
-  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop", // material
-]
+  "https://images.unsplash.com/photo-1516383607781-913a19294fd1?q=80&w=1600&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1518779578993-ec3579fee39f?q=80&w=1600&auto=format&fit=crop",
+  "https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=1600&auto=format&fit=crop",
+];
 
-export default function Hero() {
+const Hero = () => {
   return (
     <div className="relative w-full h-[500px]">
       <Image
-        src={HERO_IMAGES[0]} // currently showing the first image
+        src={HERO_IMAGES[0]}
         alt="Hero background"
         fill
         priority
@@ -21,6 +23,7 @@ export default function Hero() {
         <h1 className="text-white text-4xl font-bold">Welcome to Our Site</h1>
       </div>
     </div>
-  )
-}
+  );
+};
 
+export default Hero;
