@@ -4,7 +4,22 @@ import Image from "next/image";
 import { Card, CardContent, CardHeader, CardTitle } from "./ui/card";
 import { Badge } from "./ui/badge";
 
-export default function ProductCard({ product }) {
+export interface Product {
+  id: string;
+  cat: string;
+  title: string;
+  gsm: string | number;
+  color: string;
+  img: string;
+  bullets: string[];
+}
+
+import  Product  from "../components/Products";
+import { Button } from "./ui/button";
+
+
+
+export default function ProductCard({ product }: { product: Product }) {
   return (
     <Card className="overflow-hidden shadow-md rounded-2xl">
       <CardHeader className="p-0">
@@ -27,7 +42,9 @@ export default function ProductCard({ product }) {
             <li key={i}>{b}</li>
           ))}
         </ul>
-        <button className="mt-4 w-full border rounded-md py-2">View Details</button>
+        <Button variant="outline" className="mt-4 w-full">
+          View Details
+        </Button>
       </CardContent>
     </Card>
   );

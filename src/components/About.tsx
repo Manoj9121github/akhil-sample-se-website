@@ -2,9 +2,10 @@
 
 import React from "react";
 import { Card, CardContent } from "./ui/card";
-import { Badge, Star } from "lucide-react";
+import {  Star } from "lucide-react";
 import { BRAND } from "@/data/brand";
 import Image from "next/image";
+import { Badge } from "./ui/badge";
 
 const HERO_IMAGES = [
   "https://images.unsplash.com/photo-1516383607781-913a19294fd1?q=80&w=1600&auto=format&fit=crop",
